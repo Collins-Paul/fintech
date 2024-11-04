@@ -25,7 +25,7 @@ class _FinTechState extends State<FinTech> {
                       padding: const EdgeInsets.only(top: 80.0),
                       child: Column(
                         children: [
-                            const Text('Wallet', 
+                            const Text('Wallet Balance', 
                                 style: TextStyle(
                                   fontSize: 25.0
                                 ),
@@ -37,13 +37,13 @@ class _FinTechState extends State<FinTech> {
                                 ),),
                             Row(
                               children: [
-                                Container(
+                                Container (
                                     padding: const EdgeInsets.only(right: 5.0),
                                     child: const ElevatedButton(onPressed: null, 
-                                    style: ButtonStyle(
+                                    style:  ButtonStyle(
                                       backgroundColor: MaterialStatePropertyAll<Color>(Colors.green),
                                     ),
-                                    child: Text('Credit', 
+                                    child:  Text('Credit', 
                                       style: TextStyle(
                                         color: Colors.white
                                       ),
@@ -69,6 +69,7 @@ class _FinTechState extends State<FinTech> {
                     )
                   ],
               ),
+
             // History goes here
             Container(
               margin: const EdgeInsets.only(left: 15.5, right: 15.5, top: 15.0),
@@ -86,6 +87,55 @@ class _FinTechState extends State<FinTech> {
                         ),
                       ),
                     ],
+              ),
+            ),
+
+            // Transaction history card 
+            Container(
+              decoration: const BoxDecoration(
+                border: Border(
+                  left: BorderSide(width: 5.0, color: Colors.green)
+                ),
+              color: Color.fromARGB(255, 228, 230, 230),
+              ),
+              padding: const EdgeInsets.all(10.5),
+              margin: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 6.0),
+                        child: Text('Credit',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                            fontSize: 17.0,
+                          ),
+                        ),
+                      ),
+                      Text('Date: _______'),
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.only(bottom: 6.0),
+                        child: Text('+1,200.00',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.green,
+                            fontSize: 17.0,
+                          ),
+                        ),
+                      ),
+                      Text('Ref: ______')
+                    ],
+                  )
+                ],
               ),
             )
           ],
